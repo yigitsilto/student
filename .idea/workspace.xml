@@ -19,14 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c410c890-2147-4d69-91ed-ba74a976ab10" name="Default Changelist" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/HomeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/ObjectionRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/RegisterRepository.php" afterDir="false" />
+    <list default="true" id="c410c890-2147-4d69-91ed-ba74a976ab10" name="Default Changelist" comment="third commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ObjectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ObjectionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Panel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Panel.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +178,7 @@
       <workItem from="1599846598687" duration="6092000" />
       <workItem from="1599859170657" duration="2827000" />
       <workItem from="1599903227048" duration="5707000" />
-      <workItem from="1599911491904" duration="10573000" />
+      <workItem from="1599911491904" duration="10677000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1599920162590</created>
@@ -192,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599920162590</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="third commit">
+      <created>1599922172473</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599922172473</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +214,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="third commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" width="816" height="729" key="#Intentions" timestamp="1599920724052">

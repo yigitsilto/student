@@ -330,7 +330,7 @@
                  </div>
         </div>
 
-        <!-- objectionModal (itiraz modalı) -->
+        <!-- objectionModal (itiraz modalıı) -->
 
         <div class="modal fade" id="objectionModal" tabindex="-1" role="dialog" aria-labelledby="objectionModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
