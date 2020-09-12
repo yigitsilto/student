@@ -24,7 +24,10 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "dayspan-vuetify": "^0.4.0",
+        "laravel-vue-datatable": "^0.5.13",
         "notiflix": "^2.4.0",
+        "v-calendar": "^1.0.8",
         "vue-router": "^3.4.3"
     }
 }

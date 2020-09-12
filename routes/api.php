@@ -42,5 +42,10 @@ Route::group(['middleware'=>'api',],function (){
     Route::get("student/{id}",'HomeController@student_info');
     Route::post("update/student",'HomeController@update_student');
     Route::post("update/profile",'HomeController@update_profile');
+    Route::post("objection/create",'ObjectionController@create');
+    Route::get("objection/list/{id}",'ObjectionController@list');
+    Route::get("objection/detail/{id}",'ObjectionController@detail');
+    Route::post("objection/delete",'ObjectionController@delete');
+    Route::post("objection/update",'ObjectionController@update');
 });
 

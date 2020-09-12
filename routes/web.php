@@ -32,7 +32,9 @@ Route::get("/student",function (){
 Route::get("/profile",function (){
     return redirect("/");
 });
-
+Route::get("/objection",function (){
+    return redirect("/");
+});
 
 // mail denemesi için
 Route::get("/mail",function (){

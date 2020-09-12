@@ -104,18 +104,77 @@
                                  </div>
                              </div>
 
+                             <div class="row mt-4">
+                                 <div class="col-lg-6">
+                                     <div class="card bg-danger">
+                                         <div class="card-body">
+                                             <div class="d-flex justify-content-between align-items-baseline">
+                                                 <h6 class="card-title mb-0 text-white">Profil</h6>
+                                                 <div class="dropdown mb-2">
+
+
+                                                 </div>
+                                             </div>
+                                             <div class="row">
+                                                 <div class="col-12">
+                                                     <a class="mb-2 btn  btn-dark btn-group-xs  text-white"  data-toggle="modal" data-target="#calendarModal" v-on:click="redirectProfile">Profile Git</a>
+                                                     <div class="d-flex align-items-baseline">
+                                                         <p class="text-success">
+
+                                                         </p>
+                                                     </div>
+                                                 </div>
+
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="col-lg-6">
+                                     <div class="card bg-danger">
+                                         <div class="card-body">
+                                             <div class="d-flex justify-content-between align-items-baseline">
+                                                 <h6 class="card-title mb-0 text-white">Sınav İtirazı</h6>
+                                                 <div class="dropdown mb-2">
+
+
+                                                 </div>
+                                             </div>
+                                             <div class="row">
+                                                 <div class="col-12 ">
+                                                     <a class="mb-2 btn  btn-dark btn-group-xs  text-white" data-toggle="modal" data-target="#objectionModal">İtiraz Et</a>
+                                                     <a class="mb-2 btn  btn-dark btn-group-xs  text-white" data-toggle="modal" v-on:click="redirectObjectionList">İtiraz Listesi</a>
+                                                     <div class="d-flex align-items-baseline">
+                                                         <p class="text-success">
+
+                                                         </p>
+                                                     </div>
+                                                 </div>
+
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+
+
+                             </div>
+
                              <br>
                              <div class="table-responsive">
                                  <table class="table table-bordered table-dark table-hover">
                                      <thead>
                                      <th>İsim</th>
                                      <th>Email</th>
+                                     <th>Veli Adı</th>
+                                     <th>Veli Mail</th>
                                      <th>İşlem</th>
                                      </thead>
                                      <tbody>
                                      <tr>
                                          <td>{{this.student_name}}</td>
                                          <td>{{ this.student_mail }}</td>
+                                         <td>{{ this.name }}</td>
+                                         <td>{{ this.email }}</td>
                                          <td><a href="" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Detay</a></td>
                                      </tr>
                                      </tbody>
@@ -125,6 +184,8 @@
                      </div>
                  </div>
              </div>
+
+                <!-- else -->
                 <div v-else>
                     <div class="col-12" style="margin-top: 7%">
                         <div class="">
@@ -269,7 +330,51 @@
                  </div>
         </div>
 
-        <!-- Modal -->
+        <!-- objectionModal (itiraz modalı) -->
+
+        <div class="modal fade" id="objectionModal" tabindex="-1" role="dialog" aria-labelledby="objectionModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Sınav İtirazı</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <label for="">Sınav Tarihi</label>
+                                <input type="date"   v-model="lesson_date" class="form-control">
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label for="">Dersin Adı</label>
+                                <input type="text"   v-model="lesson_name" class="form-control">
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="">İtiraz Gerekçesi</label>
+                                <input type="text"   v-model="explanation" class="form-control">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"  data-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-danger" v-on:click="objectionSave" data-dismiss="modal" >Kaydet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Modal (detay modalı) direk verileri çektim çünkü tek bir öğrenci var o yüzden bir döngü ile bastırmadım -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -331,12 +436,13 @@ import Header from "./inc/Header";
 import TopBar from "./inc/TopBar";
 import StudentHeader from "./inc/StudentHeader";
 import StudentTopBar from "./inc/StudentTopBar";
+
 export default {
     components:{
       'app-header':Header,
         'top-bar':TopBar,
         'student-header':StudentHeader,
-        'student-top-bar':StudentTopBar
+        'student-top-bar':StudentTopBar,
     },
     name: "panel",
     mounted() {
@@ -355,11 +461,12 @@ export default {
             this.code = response.data.student_code;
             this.class_name_student = response.data.class_name;
             this.class_teacher_student = response.data.class_teacher;
+            this.user_id = response.data.id;
 
             // eğer bu kısım geldiyse bir istek daha atıp öğrenci bilgilerini çekiyoruz id = gelen datadaki user_id = id
             axios.get("/api/student/"+response.data.student_id)
                 .then(resp => {
-                    console.log(resp.data.name);
+                    console.log(resp.data);
                     this.student_code = resp.data.student_code;
                     this.student_name = resp.data.name;
                     this.student_mail = resp.data.email;
@@ -390,6 +497,7 @@ console.log(err);
           student_mail:"",
           student_code:"",
           id:"",
+          user_id:"",
           student_id:"",
           class_name:"",
           class_teacher:"",
@@ -397,6 +505,9 @@ console.log(err);
           code:"",
           class_name_student:"",
           class_teacher_student:"",
+          explanation:"",
+          lesson_date:"",
+          lesson_name:"",
 
       }
     },
@@ -407,6 +518,53 @@ console.log(err);
             localStorage.removeItem('token');
             this.$router.push({ name: 'home' })
         },
+
+        // sınav itirazı kaydı
+        objectionSave:function (e){
+            Notiflix.Loading.Hourglass();
+
+            let form = new FormData();
+
+            form.append("lesson_date",this.lesson_date);
+            form.append("lesson_name",this.lesson_name);
+            form.append("explanation",this.explanation);
+            form.append("user_id",this.user_id);
+
+            if (this.lesson_date == "" || this.lesson_name == "" || this.explanation == ""){
+                Notiflix.Loading.Remove();
+                Notiflix.Report.Failure('Uyarı','Lütfen bilgileri boş bırakmayınız.','Kapat');
+
+            }else{
+
+                axios.post("/api/objection/create",form)
+                    .then(resp => {
+                        Notiflix.Loading.Remove();
+                       if (resp.data == "ok"){
+                           this.explanation = "";
+                               this.lesson_date = "";
+                               this.lesson_name = "";
+                           Notiflix.Notify.Success('İtirazınız alınmıştır.En kısa sürede geri dönülecektir.');
+
+                       }else{
+                           Notiflix.Loading.Remove();
+                           Notiflix.Notify.Failure('Bir hata meydana geldi');
+                       }
+                    })
+                    .catch(err => {
+                        Notiflix.Loading.Remove();
+                        Notiflix.Notify.Failure('Bir hata meydana geldi');
+
+                    });
+            }
+
+        },
+        redirectObjectionList:function (e){
+            this.$router.push({ name: 'objection' })
+        },
+        redirectProfile:function (){
+            this.$router.push({ name: 'profile' })
+
+        }
 
     }
 }
