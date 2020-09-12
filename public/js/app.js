@@ -3747,6 +3747,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "TopBar",
   methods: {
+    logout: function logout(e) {
+      // tokeni siliyoruz ve login sayfasına yönlendiriyoruz.
+      localStorage.removeItem('token');
+      this.$router.push({
+        name: 'home'
+      });
+    },
     // öğrenci bilgisine yönlendirir
     redirectStudent: function redirectStudent(e) {
       this.$router.push({
