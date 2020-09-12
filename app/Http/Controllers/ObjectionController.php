@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Objection;
+use App\Repositories\ObjectionRepository;
 use Illuminate\Http\Request;
 
 class ObjectionController extends Controller
 {
+
+   private $objectionRepository;
+    public function __construct(ObjectionRepository $objectionRepository)
+    {
+// repository işlemi
+        $this->objectionRepository = $objectionRepository;
+
+    }
+
     public function create(Request  $request){
 
         $datas = [
@@ -15,51 +25,40 @@ class ObjectionController extends Controller
             'lesson_date' => $request->lesson_date,
             'lesson_name' => $request->lesson_name,
         ];
+        // ekleme işlemi
+        $send = $this->objectionRepository->create($datas);
 
-        $create = Objection::create($datas);
-
-        if ($create){
-            return "ok";
-        }else{
-            return "fail";
-        }
-
+        return $send;
     }
     public function list($id){
 
-        // son 5 veri datatable ile json yapılabilir daha fazlası için
-        $datas = Objection::where('user_id',$id)->orderBy("created_at","desc")->limit(5)->get();
-
-        return $datas->toJson();
+      // objection repositories listelemek için
+        $datas = $this->objectionRepository->list($id);
+        return $datas;
 
     }
     public function delete(Request  $request){
 
+        // silme işlemi
+        $send = $this->objectionRepository->delete($request->id);
+        return $send;
 
-        $delete = Objection::destroy($request->id);
-        if ($delete){
-            return "ok";
-        }else{
-            return "fail";
-        }
     }
     public function detail($id){
 
-        $datas = Objection::where('id',$id)->first();
+        // detay listeleme
+      $send = $this->objectionRepository->detail($id);
 
-        return $datas;
+        return $send;
 
     }
     public function update(Request $request){
 
+        // güncelleme işlemi
         $datas = $request->except("id");
-        $update = Objection::where('id',$request->id)->update($datas);
+        $send = $this->objectionRepository->update($datas,$request->id);
 
-        if ($update){
-            echo "ok";
-        }else{
-            echo "fail";
-        }
+         return $send;
 
 
 

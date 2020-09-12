@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\RegisterRepository;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,9 +17,15 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    private $registerRepository;
+
+
+    public function __construct(RegisterRepository $registerRepository)
     {
+
+        $this->registerRepository = $registerRepository;
        // $this->middleware('auth:api', ['except' => ['login']]);
+
     }
 
     /**
@@ -38,40 +45,15 @@ class AuthController extends Controller
     }
 
     public function register(Request $request){
-        // öprenci koduna göre veli eşleştirmesi yaptık
-        $student_code = $request->student_code;
-        $count = User::where('student_code',$student_code)->get()->count();
 
-        if ($count > 0){
-            $get_users_info = User::where('student_code',$student_code)->first();
-            // authority == 1 veli,  0 => öğrenci
-            $user = User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'student_id'=>$get_users_info->id,
-                'authority'=>1
-            ]);
+        $send = $this->registerRepository->register($request);
 
-
-// eğer user kayıt olduysa mail gönder ve giriş yap
-
-            if($user){
-
-                $data = [
-                    'name'=>$request->name
-                ];
-
-                \Mail::to($request->email)->send(new \App\Mail\RegisterMail($request->name));
-            }
-
+        if ($send){
             $login = $this->login();
 
             return $login;
-
-
         }else{
-            echo "fail_code";
+            return "fail_code";
         }
 
     }

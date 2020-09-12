@@ -2,19 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\HomeRepository;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
+
+    private $homeRepository;
+    public function __construct(HomeRepository $homeRepository){
+
+        $this->homeRepository = $homeRepository;
+    }
     public function student_info(Request $request){
 
-        $id = $request->id;
+        $send = $this->homeRepository->student_info($request->id);
+        return $send;
 
-        $user_info = User::where('id',$id)->first();
-
-        return $user_info;
     }
     public function update_student(Request  $request){
 
@@ -25,52 +30,18 @@ class HomeController extends Controller
           'class_name'=>$request->class_name
         ];
 
-        $update = User::where('id',$request->id)->update($datas);
-        if ($update){
-            return "ok";
-        }else{
-            return "fail";
-        }
-
+        // update işlemi
+$send = $this->homeRepository->update_student($datas,$request->id);
+return $send;
 
     }
 
     public function update_profile(Request $request){
 
 
-        if ($request->password == "null"){
-            $datas = [
-                'name'=>$request->name,
-                'email'=>$request->email,
-            ];
+ $send = $this->homeRepository->update_profile($request);
 
-            $update = User::where('id',$request->id)->update($datas);
-            if ($update){
-                return "ok";
-            }else{
-                return "fail";
-            }
-
-        }else{
-
-            $datas = [
-                'name'=>$request->name,
-                'email'=>$request->email,
-                'password'=>Hash::make($request->password),
-            ];
-
-            $update = User::where('id',$request->id)->update($datas);
-            if ($update){
-                return "ok";
-            }else{
-                return "fail";
-            }
-
-
-
-        }
-
-
+return $send;
 
     }
 
