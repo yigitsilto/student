@@ -2,6 +2,11 @@ Mailtrap.io bilgileri
 kul adi yigit@91.com.tr
 şifre 123Yigit!
 
+Laravel Notları
+1-composer install ve npm install dan sonra Login kısmında route login not found hatası veriyor ise php artisan jwt:secret düzeltecektir.
+2-mailtrap.io bilgileri env.example dosyasında vardır yukarıdaki verdiğim hesaptan kontrol edebilirsiniz
+
+
 PROJE AŞAMALARI
 1-2 tane öğrenci seeder da tanımlı şifreleri 123123123 öğrenci girişleri ve aile girişi olarak ikiye ayrılmıştır yetki.
 2-Veli Öğrenci kodu ile kayıt olur mailtrap.io ya bilgilendirme maili gider
