@@ -1928,10 +1928,30 @@ __webpack_require__.r(__webpack_exports__);
       }
     }).then(function (response) {
       notiflix__WEBPACK_IMPORTED_MODULE_0___default.a.Loading.Remove();
+      var page = localStorage.getItem("page"); // sayfa aktiflik için localstore kullandım
 
-      _this.$router.push({
-        name: 'panel'
-      });
+      if (page == null || page == "null") {
+        _this.$router.push({
+          name: 'panel'
+        });
+      } else {
+        // öğrenci sayfayı incele kısmından localstorege i değiştirip girememesi için böyle bir kontrol yaptım
+        if (page == "objection" || page == "student") {
+          if (response.data.authority == 0) {
+            _this.$router.push({
+              name: "panel"
+            });
+          } else {
+            _this.$router.push({
+              name: page
+            });
+          }
+        } else {
+          _this.$router.push({
+            name: page
+          });
+        }
+      }
     })["catch"](function (error) {
       notiflix__WEBPACK_IMPORTED_MODULE_0___default.a.Loading.Remove();
       console.log(error);
@@ -3098,11 +3118,15 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     redirectObjectionList: function redirectObjectionList(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'objection');
       this.$router.push({
         name: 'objection'
       });
     },
     redirectProfile: function redirectProfile() {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'profile');
       this.$router.push({
         name: 'profile'
       });
@@ -3543,6 +3567,8 @@ __webpack_require__.r(__webpack_exports__);
     // logout metodu
     logout: function logout(e) {
       // tokeni siliyoruz ve login sayfasına yönlendiriyoruz.
+      localStorage.removeItem('page');
+      localStorage.setItem('page', null);
       localStorage.removeItem('token');
       this.$router.push({
         name: 'home'
@@ -3550,18 +3576,24 @@ __webpack_require__.r(__webpack_exports__);
     },
     // öğrenci bilgisine yönlendirir
     redirectStudent: function redirectStudent(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'student');
       this.$router.push({
         name: 'student'
       });
     },
     // profil sayfasına yönlendirir
     redirectProfile: function redirectProfile(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'profile');
       this.$router.push({
         name: 'profile'
       });
     },
     // anasayfa bilgisine yönlendirir
     redirectHome: function redirectHome(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'panel');
       this.$router.push({
         name: 'panel'
       });
@@ -3613,6 +3645,8 @@ __webpack_require__.r(__webpack_exports__);
     // logout metodu
     logout: function logout(e) {
       // tokeni siliyoruz ve login sayfasına yönlendiriyoruz.
+      localStorage.removeItem('page');
+      localStorage.setItem('page', null);
       localStorage.removeItem('token');
       this.$router.push({
         name: 'home'
@@ -3620,18 +3654,24 @@ __webpack_require__.r(__webpack_exports__);
     },
     // öğrenci bilgisine yönlendirir
     redirectStudent: function redirectStudent(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'student');
       this.$router.push({
         name: 'student'
       });
     },
     // profil sayfasına yönlendirir
     redirectProfile: function redirectProfile(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'profile');
       this.$router.push({
         name: 'profile'
       });
     },
     // anasayfa bilgisine yönlendirir
     redirectHome: function redirectHome(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'panel');
       this.$router.push({
         name: 'panel'
       });
@@ -3684,6 +3724,8 @@ __webpack_require__.r(__webpack_exports__);
     // çıkış yap metodu
     logout: function logout(e) {
       // tokeni siliyoruz ve login sayfasına yönlendiriyoruz.
+      localStorage.removeItem('page');
+      localStorage.setItem('page', null);
       localStorage.removeItem('token');
       this.$router.push({
         name: 'home'
@@ -3691,18 +3733,24 @@ __webpack_require__.r(__webpack_exports__);
     },
     // öğrenci bilgisine yönlendirir
     redirectStudent: function redirectStudent(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'student');
       this.$router.push({
         name: 'student'
       });
     },
     // profil sayfasına yönlendirir
     redirectProfile: function redirectProfile(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'profile');
       this.$router.push({
         name: 'profile'
       });
     },
     // anasayfa bilgisine yönlendirir
     redirectHome: function redirectHome(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'panel');
       this.$router.push({
         name: 'panel'
       });
@@ -3758,24 +3806,32 @@ __webpack_require__.r(__webpack_exports__);
     logout: function logout(e) {
       // tokeni siliyoruz ve login sayfasına yönlendiriyoruz.
       localStorage.removeItem('token');
+      localStorage.removeItem('page');
+      localStorage.setItem('page', null);
       this.$router.push({
         name: 'home'
       });
     },
     // öğrenci bilgisine yönlendirir
     redirectStudent: function redirectStudent(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'student');
       this.$router.push({
         name: 'student'
       });
     },
     // profil sayfasına yönlendirir
     redirectProfile: function redirectProfile(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'profile');
       this.$router.push({
         name: 'profile'
       });
     },
     // anasayfa bilgisine yönlendirir
     redirectHome: function redirectHome(e) {
+      localStorage.removeItem('page');
+      localStorage.setItem('page', 'panel');
       this.$router.push({
         name: 'panel'
       });

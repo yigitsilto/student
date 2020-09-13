@@ -19,7 +19,27 @@ export default {
         ).then(response => {
             Notiflix.Loading.Remove();
 
-            this.$router.push({name: 'panel'});
+            var page = localStorage.getItem("page");
+            // sayfa aktiflik için localstore kullandım
+            if(page == null || page =="null"){
+                this.$router.push({name: 'panel'});
+            }else{
+
+                // öğrenci sayfayı incele kısmından localstorege i değiştirip girememesi için böyle bir kontrol yaptım
+                if (page == "objection" || page == "student"){
+                    if (response.data.authority == 0){
+                        this.$router.push({name: "panel"});
+
+                    }else{
+                        this.$router.push({name: page});
+                    }
+                }else{
+                    this.$router.push({name: page});
+
+                }
+
+            }
+
         }).catch(error => {
             Notiflix.Loading.Remove();
 

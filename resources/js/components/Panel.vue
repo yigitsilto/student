@@ -559,9 +559,13 @@ console.log(err);
 
         },
         redirectObjectionList:function (e){
+            localStorage.removeItem('page');
+            localStorage.setItem('page', 'objection');
             this.$router.push({ name: 'objection' })
         },
         redirectProfile:function (){
+            localStorage.removeItem('page');
+            localStorage.setItem('page', 'profile');
             this.$router.push({ name: 'profile' })
 
         }

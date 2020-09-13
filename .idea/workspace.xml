@@ -19,11 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c410c890-2147-4d69-91ed-ba74a976ab10" name="Default Changelist" comment="third commit">
+    <list default="true" id="c410c890-2147-4d69-91ed-ba74a976ab10" name="Default Changelist" comment="proje ile ilgili not ve sql dosyası">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Panel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Panel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/inc/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/inc/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/inc/StudentHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/inc/StudentHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/inc/StudentTopBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/inc/StudentTopBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/inc/TopBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/inc/TopBar.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +185,8 @@
       <workItem from="1599859170657" duration="2827000" />
       <workItem from="1599903227048" duration="5707000" />
       <workItem from="1599911491904" duration="10940000" />
-      <workItem from="1600001205204" duration="216000" />
+      <workItem from="1600001205204" duration="1109000" />
+      <workItem from="1600020366573" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1599920162590</created>
@@ -211,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599922482176</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="StudentTopBar logout update">
+      <created>1600001550423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600001550423</updated>
+    </task>
+    <task id="LOCAL-00006" summary="proje ile ilgili not ve sql dosyası">
+      <created>1600002355551</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600002355551</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +252,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="second commit" />
     <MESSAGE value="third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
+    <MESSAGE value="StudentTopBar logout update" />
+    <MESSAGE value="proje ile ilgili not ve sql dosyası" />
+    <option name="LAST_COMMIT_MESSAGE" value="proje ile ilgili not ve sql dosyası" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" width="816" height="729" key="#Intentions" timestamp="1599920724052">

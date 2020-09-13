@@ -36,20 +36,28 @@ export default {
         logout:function (e){
             // tokeni siliyoruz ve login sayfasına yönlendiriyoruz.
             localStorage.removeItem('token');
+            localStorage.removeItem('page');
+            localStorage.setItem('page', null);
             this.$router.push({ name: 'home' })
         },
         // öğrenci bilgisine yönlendirir
         redirectStudent:function (e){
+            localStorage.removeItem('page');
+            localStorage.setItem('page', 'student');
             this.$router.push({ name: 'student' })
 
         },
         // profil sayfasına yönlendirir
         redirectProfile:function (e){
+            localStorage.removeItem('page');
+            localStorage.setItem('page', 'profile');
             this.$router.push({ name: 'profile' })
 
         },
         // anasayfa bilgisine yönlendirir
         redirectHome:function (e){
+            localStorage.removeItem('page');
+            localStorage.setItem('page', 'panel');
             this.$router.push({ name: 'panel' })
 
         },
