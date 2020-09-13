@@ -3681,6 +3681,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "StudentTopBar",
   methods: {
+    // çıkış yap metodu
+    logout: function logout(e) {
+      // tokeni siliyoruz ve login sayfasına yönlendiriyoruz.
+      localStorage.removeItem('token');
+      this.$router.push({
+        name: 'home'
+      });
+    },
     // öğrenci bilgisine yönlendirir
     redirectStudent: function redirectStudent(e) {
       this.$router.push({
@@ -59214,7 +59222,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nValidationError: Invalid options object. Sass Loader has been initialized using an options object that does not match the API schema.\n - options has an unknown property 'outputStyle'. These properties are valid:\n   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }\n    at validate (C:\\xampp\\htdocs\\student\\node_modules\\schema-utils\\dist\\validate.js:98:11)\n    at Object.loader (C:\\xampp\\htdocs\\student\\node_modules\\sass-loader\\dist\\index.js:36:28)\n    at C:\\xampp\\htdocs\\student\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\xampp\\htdocs\\student\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\xampp\\htdocs\\student\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at runSyncOrAsync (C:\\xampp\\htdocs\\student\\node_modules\\loader-runner\\lib\\LoaderRunner.js:143:3)\n    at iterateNormalLoaders (C:\\xampp\\htdocs\\student\\node_modules\\loader-runner\\lib\\LoaderRunner.js:232:2)\n    at C:\\xampp\\htdocs\\student\\node_modules\\loader-runner\\lib\\LoaderRunner.js:205:4\n    at C:\\xampp\\htdocs\\student\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
 
 /***/ }),
 

@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c410c890-2147-4d69-91ed-ba74a976ab10" name="Default Changelist" comment="third commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/inc/TopBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/inc/TopBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/inc/StudentTopBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/inc/StudentTopBar.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +180,8 @@
       <workItem from="1599846598687" duration="6092000" />
       <workItem from="1599859170657" duration="2827000" />
       <workItem from="1599903227048" duration="5707000" />
-      <workItem from="1599911491904" duration="10844000" />
+      <workItem from="1599911491904" duration="10940000" />
+      <workItem from="1600001205204" duration="216000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1599920162590</created>
@@ -203,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599922267129</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="third commit">
+      <created>1599922482176</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1599922482176</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +227,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -30,6 +30,13 @@
 export default {
     name: "StudentTopBar",
     methods:{
+
+        // çıkış yap metodu
+        logout:function (e){
+            // tokeni siliyoruz ve login sayfasına yönlendiriyoruz.
+            localStorage.removeItem('token');
+            this.$router.push({ name: 'home' })
+        },
         // öğrenci bilgisine yönlendirir
         redirectStudent:function (e){
             this.$router.push({ name: 'student' })
