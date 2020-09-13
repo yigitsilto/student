@@ -11,6 +11,11 @@ Laravel Notları
 6- git ssh git@github.com:yigitsilto/student.git
 7-bir sorun olursa git kullanıcı adı yigitsilto5@gmail.com şifresi yigitsilto..123
 
+PROJE KULLANICI BİLGİLERİ
+1-birinci kullanıcı Ahmet@gmail.com şifresi 123123123 öğrenci kodu 1IkhjFKxf0ZM
+2-ikinci kullanıcı Mehmet@gmail.com şifresi 123123123 öğrenc kodu N0urGqGs2NzM
+veli öğrenci kodlarını girerek üye olabiliyor.
+
 PROJE AŞAMALARI
 1-2 tane öğrenci seeder da tanımlı şifreleri 123123123 öğrenci girişleri ve aile girişi olarak ikiye ayrılmıştır yetki.
 2-Veli Öğrenci kodu ile kayıt olur mailtrap.io ya bilgilendirme maili gider
