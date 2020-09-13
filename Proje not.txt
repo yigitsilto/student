@@ -1,0 +1,11 @@
+Mailtrap.io bilgileri
+kul adi yigit@91.com.tr
+şifre 123Yigit!
+
+PROJE AŞAMALARI
+1-2 tane öğrenci seeder da tanımlı şifreleri 123123123 öğrenci girişleri ve aile girişi olarak ikiye ayrılmıştır yetki.
+2-Veli Öğrenci kodu ile kayıt olur mailtrap.io ya bilgilendirme maili gider
+3-Veli anasayfada öğrenci bilgisini ve detayını görebilir. Sınava itiraz edebilir ve liste ekranına giderek sınav itirazlarını güncelleyip silebilir.
+4-Öğrenci bilgisi sekmesinden öğrencinin bilgilerini görüp güncelleme işlemi yapabilir
+5-profil kısmından kendi ile ilgili bilgileri güncelleyebilir (email,ad,şifre)
+6-database tabloları hem migrate edilebilir. Hemde sql dosyası olarak dosyaların içinde student.sql olarak paylaştım
