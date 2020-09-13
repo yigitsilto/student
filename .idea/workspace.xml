@@ -182,7 +182,7 @@
       <workItem from="1600001205204" duration="1109000" />
       <workItem from="1600020366573" duration="2026000" />
       <workItem from="1600026720351" duration="27000" />
-      <workItem from="1600027356395" duration="1164000" />
+      <workItem from="1600027356395" duration="2059000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1599920162590</created>
@@ -240,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600027959807</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="son güncelleme">
+      <created>1600028547172</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600028547172</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,9 +308,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="227" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599921504626" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1599919570877">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="552" y="247" key="Vcs.Push.Dialog.v2" timestamp="1600028643825">
+      <screen x="0" y="0" width="1920" height="1030" />
     </state>
+    <state x="552" y="247" key="Vcs.Push.Dialog.v2/0.0.1920.1030@0.0.1920.1030" timestamp="1600028643825" />
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599919570877" />
     <state x="616" y="235" key="run.anything.popup" timestamp="1599907137063">
       <screen x="0" y="0" width="1920" height="1040" />
