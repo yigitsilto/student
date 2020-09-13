@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c410c890-2147-4d69-91ed-ba74a976ab10" name="Default Changelist" comment="son güncelleme">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proje not.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Proje not.txt" afterDir="false" />
     </list>
@@ -182,7 +183,8 @@
       <workItem from="1600001205204" duration="1109000" />
       <workItem from="1600020366573" duration="2026000" />
       <workItem from="1600026720351" duration="27000" />
-      <workItem from="1600027356395" duration="2059000" />
+      <workItem from="1600027356395" duration="2151000" />
+      <workItem from="1600029768284" duration="190000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1599920162590</created>
@@ -247,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600028547172</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="son güncelleme">
+      <created>1600029438916</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600029438916</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,11 +292,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599921514990" />
-    <state x="686" y="209" key="FileChooserDialogImpl" timestamp="1600026745910">
+    <state x="686" y="209" key="FileChooserDialogImpl" timestamp="1600029521397">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599852743520" />
-    <state x="686" y="209" key="FileChooserDialogImpl/0.0.1920.1030@0.0.1920.1030" timestamp="1600026745910" />
+    <state x="686" y="209" key="FileChooserDialogImpl/0.0.1920.1030@0.0.1920.1030" timestamp="1600029521397" />
     <state width="2344" height="336" key="GridCell.Tab.0.bottom" timestamp="1599826207911">
       <screen x="2400" y="0" width="2400" height="1300" />
     </state>
@@ -308,10 +317,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="227" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599921504626" />
-    <state x="552" y="247" key="Vcs.Push.Dialog.v2" timestamp="1600028643825">
+    <state x="552" y="247" key="Vcs.Push.Dialog.v2" timestamp="1600029446660">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state x="552" y="247" key="Vcs.Push.Dialog.v2/0.0.1920.1030@0.0.1920.1030" timestamp="1600028643825" />
+    <state x="552" y="247" key="Vcs.Push.Dialog.v2/0.0.1920.1030@0.0.1920.1030" timestamp="1600029446660" />
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599919570877" />
     <state x="616" y="235" key="run.anything.popup" timestamp="1599907137063">
       <screen x="0" y="0" width="1920" height="1040" />

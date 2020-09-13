@@ -3,12 +3,13 @@ kul adi yigit@91.com.tr
 şifre 123Yigit!
 
 Laravel Notları
-1-composer install ve npm install dan sonra Login kısmında route login not found hatası veriyor ise php artisan jwt:secret düzeltecektir.
-2-mailtrap.io bilgileri env.example dosyasında vardır yukarıdaki verdiğim hesaptan kontrol edebilirsiniz
-3-composer create-project --prefer-dist laravel/laravel blog "6.*" komutu ile laravel i kurdum
-4-git https https://github.com/yigitsilto/student.git
-5- git ssh git@github.com:yigitsilto/student.git
-6-bir sorun olursa git kullanıcı adı yigitsilto5@gmail.com şifresi yigitsilto..123
+1-env example dosyasını env e taşıyabilirsiniz mail ayarları jwt secret hepsi ayarlıdır. database adı student olarak ayarlanmıştır.
+2-composer install ve npm install dan sonra Login kısmında , loginden sonra veriler gelmez ise veya route login not found hatası veriyor ise php artisan jwt:secret düzeltecektir.
+3-mailtrap.io bilgileri env.example dosyasında vardır yukarıdaki verdiğim hesaptan kontrol edebilirsiniz
+4-composer create-project --prefer-dist laravel/laravel blog "6.*" komutu ile laravel i kurdum
+5-git https https://github.com/yigitsilto/student.git
+6- git ssh git@github.com:yigitsilto/student.git
+7-bir sorun olursa git kullanıcı adı yigitsilto5@gmail.com şifresi yigitsilto..123
 
 PROJE AŞAMALARI
 1-2 tane öğrenci seeder da tanımlı şifreleri 123123123 öğrenci girişleri ve aile girişi olarak ikiye ayrılmıştır yetki.
